@@ -1,5 +1,5 @@
 var fs = require('fs'),
-    words = require('./data/spache.json');
+    words = require('../data/spache.json');
 
 fs.writeFileSync('Supported-words.md',
     'Supported Words\n' +
