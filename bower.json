@@ -8,6 +8,9 @@
     "word",
     "list"
   ],
+  "dependencies": {
+    "datalist-interface": "^0.0.1"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/wooorm/spache.git"
@@ -15,9 +18,6 @@
   "authors": [
     "Titus Wormer <tituswormer@gmail.com>"
   ],
-  "dependencies": {
-    "datalist-interface": "~0.0.1"
-  },
   "ignore": [
     ".*",
     "*.log",

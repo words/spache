@@ -8,14 +8,14 @@
     "word",
     "list"
   ],
+  "dependencies": {
+    "wooorm/datalist-interface": "0.0.1"
+  },
   "repository": "wooorm/spache",
   "scripts": [
     "index.js"
   ],
   "json": [
     "data/spache.json"
-  ],
-  "dependencies": {
-    "wooorm/datalist-interface": "~0.0.1"
-  }
+  ]
 }
