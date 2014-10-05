@@ -25,10 +25,10 @@
     "components",
     "build",
     "component.json",
-    "data/spache.txt",
     "package.json",
     "coverage",
     "node_modules",
+    "script",
     "spec"
   ]
 }
