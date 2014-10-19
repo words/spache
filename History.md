@@ -1,4 +1,16 @@
 
+n.n.n / 2014-10-19
+==================
+
+ * Refactor test
+ * Refactor module
+ * Add pretty output to build-step
+ * Move `script/build-supported-words.js` to `script/build-support.js`
+ * Add `script/` to .npmignore, bower ignore
+ * Move `spec/spache.spec.js` to `test.js`
+ * Update datalist-interface
+ * Update .gitignore, .npmignore, bower ignore
+
 0.1.0 / 2014-10-05
 ==================
 
