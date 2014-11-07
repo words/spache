@@ -1,4 +1,4 @@
-# spache [![Build Status](https://travis-ci.org/wooorm/spache.svg?branch=master)](https://travis-ci.org/wooorm/spache) [![Coverage Status](https://img.shields.io/coveralls/wooorm/spache.svg)](https://coveralls.io/r/wooorm/spache?branch=master)
+# spache [![Build Status](https://img.shields.io/travis/wooorm/spache.svg?style=flat)](https://travis-ci.org/wooorm/spache) [![Coverage Status](https://img.shields.io/coveralls/wooorm/spache.svg?style=flat)](https://coveralls.io/r/wooorm/spache?branch=master)
 
 List of easy American-English words: The Revised Spache (1974).
 
