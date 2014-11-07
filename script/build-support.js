@@ -1,7 +1,18 @@
 'use strict';
 
-var fs = require('fs'),
-    words = require('../data/spache.json');
+/**
+ * Dependencies.
+ */
+
+var fs,
+    words;
+
+fs = require('fs');
+words = require('../data/spache.json');
+
+/**
+ * Write.
+ */
 
 fs.writeFileSync('Supported-words.md',
     'Supported Words\n' +
