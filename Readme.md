@@ -42,7 +42,7 @@ See [the **datalist-interface** API](https://github.com/wooorm/datalist-interfac
 
 ## Supported words
 
-See [Supported-words.md](Supported-words.md).
+See [Support.md](Support.md).
 
 ## Related
 
