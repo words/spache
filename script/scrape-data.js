@@ -1,6 +1,6 @@
 'use strict';
 
-/**
+/*
  * Dependencies.
  */
 
@@ -15,7 +15,6 @@ Scraper = require('scraperjs').DynamicScraper;
  *
  * @return {Array.<string>}
  */
-
 function scrape() {
     return Array.prototype.slice.call(
         document.querySelectorAll('td p')
@@ -30,7 +29,6 @@ function scrape() {
  * @param {Array.<string>} values
  * @return {Array.<string>}
  */
-
 function parse(values) {
     values = values
         .join('|')
@@ -54,12 +52,11 @@ function parse(values) {
  *
  * @param {Array.<string>} results - Raw data.
  */
-
 function save(results) {
     fs.writeFileSync('data/spache.txt', parse(results).join('\n') + '\n');
 }
 
-/**
+/*
  * Scraper.
  */
 
