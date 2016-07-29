@@ -1,23 +1,13 @@
+/**
+ * @author Titus Wormer
+ * @copyright 2014 Titus Wormer
+ * @license MIT
+ * @module spache
+ * @fileoverview List of simple American-English words:
+ *   The Revised Spache (1974).
+ */
+
 'use strict';
 
-/*
- * Dependencies.
- */
-
-var Interface;
-
-Interface = require('datalist-interface');
-
-/*
- * Data.
- */
-
-var words;
-
-words = require('./data/spache.json');
-
-/*
- * Expose spache.
- */
-
-module.exports = new Interface(words);
+/* Expose. */
+module.exports = require('./index.json');
