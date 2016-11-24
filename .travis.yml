@@ -1,9 +1,9 @@
 language: node_js
 node_js:
 - '4.0'
-- '5.0'
-- '6.0'
-after_success: bash <(curl -s https://codecov.io/bash)
+- '7.0'
+after_script: bash <(curl -s https://codecov.io/bash)
+sudo: false
 deploy:
   - provider: npm
     email: tituswormer@gmail.com
@@ -11,7 +11,7 @@ deploy:
       secure: XO4isromVFV7qpNYvqCZ3RXkp1xO+CGDH26RafVeD8zrhkynxN+sihOmE7jJRZJzH1bM945pyCJe4iaAprYnBbV2aKaBCOIjIoeGx1FMi3Z6daYM2CVaGFix1Emwfp1rUpJh76hLWeSrfwKild9yyeHDlpxYvCTnCRKPBkDuIBk=
     on:
       tags: true
-      node: '5.0'
+      node: '4.0'
   - provider: releases
     api_key:
       secure: WPX1vEJ58FJKttn7sqNfHuYfLZr8SsKLGrQG2iTG8ayV/NXisSF38SJj5R3WpSCwAgegQf7s7maj+sL9QEuOdthhiuYprO4F5/LWzI8Qq14uTDUsZ/BlMN7yEhzet+PYXo7OI3CbWj0A3fuyUIHtzKQ8rCmZxkzx3ZXHD69lTRk=
@@ -20,4 +20,4 @@ deploy:
       - "spache.min.js"
     on:
       tags: true
-      node: '6.0'
+      node: '7.0'
