@@ -8,15 +8,15 @@
     "word",
     "list"
   ],
-  "files": [
-    "index.js",
-    "index.json"
-  ],
   "repository": "https://github.com/wooorm/spache",
   "bugs": "https://github.com/wooorm/spache/issues",
   "author": "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)",
   "contributors": [
     "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)"
+  ],
+  "main": "index.json",
+  "files": [
+    "index.json"
   ],
   "dependencies": {},
   "devDependencies": {
@@ -32,7 +32,7 @@
   "scripts": {
     "build-md": "remark . --quiet --frail",
     "build-generate": "node script/generate.js",
-    "build-bundle": "browserify index.js --bare -s spache > spache.js",
+    "build-bundle": "browserify index.json --bare -s spache > spache.js",
     "build-mangle": "esmangle spache.js > spache.min.js",
     "build": "npm run build-md && npm run build-bundle && npm run build-mangle",
     "lint": "xo",
