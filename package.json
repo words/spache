@@ -25,13 +25,13 @@
     "esmangle": "^1.0.1",
     "jsdom": "^9.8.3",
     "nyc": "^10.0.0",
-    "remark-cli": "^2.0.0",
-    "remark-preset-wooorm": "^1.0.0",
+    "remark-cli": "^3.0.0",
+    "remark-preset-wooorm": "^2.0.0",
     "tape": "^4.0.0",
     "xo": "^0.17.0"
   },
   "scripts": {
-    "build-md": "remark . --quiet --frail",
+    "build-md": "remark . -qfo",
     "build-generate": "node build",
     "build-bundle": "browserify index.json --bare -s spache > spache.js",
     "build-mangle": "esmangle spache.js > spache.min.js",
@@ -54,7 +54,6 @@
     "branches": 100
   },
   "remarkConfig": {
-    "output": true,
-    "presets": "wooorm"
+    "plugins": ["preset-wooorm"]
   }
 }
