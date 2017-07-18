@@ -22,12 +22,16 @@
   "devDependencies": {
     "bail": "^1.0.1",
     "browserify": "^14.0.0",
+    "concat-stream": "^1.6.0",
     "esmangle": "^1.0.1",
-    "jsdom": "^9.8.3",
+    "hast-util-select": "^1.0.1",
+    "hast-util-to-string": "^1.0.0",
     "nyc": "^11.0.0",
+    "rehype-parse": "^4.0.0",
     "remark-cli": "^3.0.0",
     "remark-preset-wooorm": "^3.0.0",
     "tape": "^4.0.0",
+    "unified": "^6.1.5",
     "xo": "^0.18.0"
   },
   "scripts": {
@@ -35,7 +39,7 @@
     "build-generate": "node build",
     "build-bundle": "browserify index.json --bare -s spache > spache.js",
     "build-mangle": "esmangle spache.js > spache.min.js",
-    "build": "npm run build-md && npm run build-bundle && npm run build-mangle",
+    "build": "npm run build-generate && npm run build-md && npm run build-bundle && npm run build-mangle",
     "lint": "xo",
     "test-api": "node test",
     "test-coverage": "nyc --reporter lcov tape test.js",
