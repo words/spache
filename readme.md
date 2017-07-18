@@ -9,7 +9,7 @@ You probably also want the [formula][].
 
 ## Installation
 
-[npm][npm-install]:
+[npm][]:
 
 ```bash
 npm install spache
@@ -20,7 +20,7 @@ npm install spache
 ```js
 var spache = require('spache');
 
-spache.length; // 1063
+spache.length; //=> 1063
 
 console.log(spache.slice(0, 10));
 ```
@@ -48,18 +48,18 @@ Yields:
 
 ## Related
 
-*   [buzzwords](https://github.com/wooorm/buzzwords)
-    — List of buzzwords;
-*   [fillers](https://github.com/wooorm/fillers)
-    — List of filler words;
-*   [hedges](https://github.com/wooorm/hedges)
-    — List of hedge words;
-*   [profanities](https://github.com/wooorm/profanities)
-    — List of profane words;
-*   [dale-chall](https://github.com/wooorm/dale-chall)
-    — List of familiar American-English words: New Dale-Chall (1995);
-*   [weasels](https://github.com/wooorm/weasels)
-    — List of weasel words.
+*   [`buzzwords`](https://github.com/wooorm/buzzwords)
+    — List of buzzwords
+*   [`fillers`](https://github.com/wooorm/fillers)
+    — List of filler words
+*   [`hedges`](https://github.com/wooorm/hedges)
+    — List of hedge words
+*   [`profanities`](https://github.com/wooorm/profanities)
+    — List of profane words
+*   [`dale-chall`](https://github.com/wooorm/dale-chall)
+    — List of familiar American-English words: New Dale-Chall (1995)
+*   [`weasels`](https://github.com/wooorm/weasels)
+    — List of weasel words
 
 ## License
 
@@ -75,7 +75,7 @@ Yields:
 
 [codecov]: https://codecov.io/github/wooorm/spache
 
-[npm-install]: https://docs.npmjs.com/cli/install
+[npm]: https://docs.npmjs.com/cli/install
 
 [license]: LICENSE
 
