@@ -1,4 +1,4 @@
-# spache [![Build Status][travis-badge]][travis] [![Coverage Status][codecov-badge]][codecov]
+# spache [![Build Status][travis-badge]][travis]
 
 List of easy American-English words: [Revised Spache (1974)][wiki].
 
@@ -70,10 +70,6 @@ Yields:
 [travis-badge]: https://img.shields.io/travis/wooorm/spache.svg
 
 [travis]: https://travis-ci.org/wooorm/spache
-
-[codecov-badge]: https://img.shields.io/codecov/c/github/wooorm/spache.svg
-
-[codecov]: https://codecov.io/github/wooorm/spache
 
 [npm]: https://docs.npmjs.com/cli/install
 
