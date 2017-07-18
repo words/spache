@@ -8,7 +8,7 @@
     "word",
     "list"
   ],
-  "repository": "https://github.com/wooorm/spache",
+  "repository": "wooorm/spache",
   "bugs": "https://github.com/wooorm/spache/issues",
   "author": "Titus Wormer <tituswormer@gmail.com> (http://wooorm.com)",
   "contributors": [
@@ -55,6 +55,8 @@
     "branches": 100
   },
   "remarkConfig": {
-    "plugins": ["preset-wooorm"]
+    "plugins": [
+      "preset-wooorm"
+    ]
   }
 }
