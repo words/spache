@@ -1,7 +1,7 @@
 language: node_js
 node_js:
 - '4.0'
-- '8.0'
+- '9.0'
 sudo: false
 deploy:
   - provider: npm
@@ -10,7 +10,7 @@ deploy:
       secure: XO4isromVFV7qpNYvqCZ3RXkp1xO+CGDH26RafVeD8zrhkynxN+sihOmE7jJRZJzH1bM945pyCJe4iaAprYnBbV2aKaBCOIjIoeGx1FMi3Z6daYM2CVaGFix1Emwfp1rUpJh76hLWeSrfwKild9yyeHDlpxYvCTnCRKPBkDuIBk=
     on:
       tags: true
-      node: '4.0'
+      node: '9.0'
   - provider: releases
     skip_cleanup: true
     api_key:
@@ -20,4 +20,4 @@ deploy:
       - "spache.min.js"
     on:
       tags: true
-      node: '8.0'
+      node: '9.0'
