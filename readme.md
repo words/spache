@@ -67,9 +67,9 @@ Yields:
 
 <!-- Definitions -->
 
-[travis-badge]: https://img.shields.io/travis/wooorm/spache.svg
+[travis-badge]: https://img.shields.io/travis/words/spache.svg
 
-[travis]: https://travis-ci.org/wooorm/spache
+[travis]: https://travis-ci.org/words/spache
 
 [npm]: https://docs.npmjs.com/cli/install
 
@@ -81,4 +81,4 @@ Yields:
 
 [book]: http://books.google.com/books?id=oNXFQ9Gn6XIC&pg=PA106&lpg=PA106
 
-[formula]: https://github.com/wooorm/spache-formula
+[formula]: https://github.com/words/spache-formula
