@@ -1,4 +1,8 @@
-# spache [![Build Status][travis-badge]][travis]
+# spache
+
+[![Build][build-badge]][build]
+[![Downloads][downloads-badge]][downloads]
+[![Size][size-badge]][size]
 
 List of easy American-English words: [Revised Spache (1974)][wiki].
 
@@ -67,9 +71,17 @@ Yields:
 
 <!-- Definitions -->
 
-[travis-badge]: https://img.shields.io/travis/words/spache.svg
+[build-badge]: https://img.shields.io/travis/words/spache.svg
 
-[travis]: https://travis-ci.org/words/spache
+[build]: https://travis-ci.org/words/spache
+
+[downloads-badge]: https://img.shields.io/npm/dm/spache.svg
+
+[downloads]: https://www.npmjs.com/package/spache
+
+[size-badge]: https://img.shields.io/bundlephobia/minzip/spache.svg
+
+[size]: https://bundlephobia.com/result?p=spache
 
 [npm]: https://docs.npmjs.com/cli/install
 
