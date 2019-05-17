@@ -1,7 +1,7 @@
 'use strict';
 
 var test = require('tape');
-var spache = require('./');
+var spache = require('.');
 
 test('spache', function (t) {
   t.equal(typeof spache, 'object', 'should be an array #1');
