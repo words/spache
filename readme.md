@@ -18,11 +18,11 @@ npm install spache
 ## Usage
 
 ```js
-var spache = require('spache');
+var spache = require('spache')
 
-spache.length; //=> 1063
+spache.length //=> 1063
 
-console.log(spache.slice(0, 10));
+console.log(spache.slice(0, 10))
 ```
 
 Yields:
