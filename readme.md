@@ -75,10 +75,10 @@ Yields:
 
 [license]: license
 
-[author]: http://wooorm.com
+[author]: https://wooorm.com
 
 [wiki]: https://en.wikipedia.org/wiki/Spache_readability_formula
 
-[book]: http://books.google.com/books?id=oNXFQ9Gn6XIC&pg=PA106&lpg=PA106
+[book]: https://books.google.com/books?id=oNXFQ9Gn6XIC&pg=PA106&lpg=PA106
 
 [formula]: https://github.com/words/spache-formula
