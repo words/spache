@@ -1,23 +1,15 @@
 language: node_js
-node_js:
-- '4.0'
-- '9.0'
 sudo: false
+node_js:
+  - lts/dubnium
+  - node
 deploy:
-  - provider: npm
-    email: tituswormer@gmail.com
-    api_key:
-      secure: XO4isromVFV7qpNYvqCZ3RXkp1xO+CGDH26RafVeD8zrhkynxN+sihOmE7jJRZJzH1bM945pyCJe4iaAprYnBbV2aKaBCOIjIoeGx1FMi3Z6daYM2CVaGFix1Emwfp1rUpJh76hLWeSrfwKild9yyeHDlpxYvCTnCRKPBkDuIBk=
-    on:
-      tags: true
-      node: '9.0'
-  - provider: releases
-    skip_cleanup: true
-    api_key:
-      secure: WPX1vEJ58FJKttn7sqNfHuYfLZr8SsKLGrQG2iTG8ayV/NXisSF38SJj5R3WpSCwAgegQf7s7maj+sL9QEuOdthhiuYprO4F5/LWzI8Qq14uTDUsZ/BlMN7yEhzet+PYXo7OI3CbWj0A3fuyUIHtzKQ8rCmZxkzx3ZXHD69lTRk=
-    file:
-      - "spache.js"
-      - "spache.min.js"
-    on:
-      tags: true
-      node: '9.0'
+  provider: releases
+  skip_cleanup: true
+  api_key:
+    secure: GLY2fJ1GzUwHbfjKpwsH+jxkv9v9zLZSUoLZp1MvOV3XC9CDbgzfBFMBoEtbHjPgdwrTFaKtRuYwKoLZ5J0154br+MqxE7+A5EPgVVPbXFa0P/9YsJTRcCrgclZ04aIl+nBI0fkzefUBbCkyJ5ad19bpgK148mrP0U1xN8A8HJ0=
+  file:
+    - 'spache.js'
+    - 'spache.min.js'
+  on:
+    tags: true
