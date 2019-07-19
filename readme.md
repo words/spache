@@ -4,7 +4,7 @@
 [![Downloads][downloads-badge]][downloads]
 [![Size][size-badge]][size]
 
-List of easy American-English words: [Revised Spache (1974)][wiki].
+List of familiar American-English words: [Revised Spache (1974)][wiki].
 
 Read more on the matter in [Perera, Katherine.  *Linguistic Difficulty
 in Reading Material.*  (Linguistics and the Teacher.  Vol.  112)][book].
@@ -61,7 +61,7 @@ Yields:
 *   [`profanities`](https://github.com/words/profanities)
     — List of profane words
 *   [`dale-chall`](https://github.com/words/dale-chall)
-    — List of familiar American-English words: New Dale-Chall (1995)
+    — List of easy American-English words: New Dale-Chall (1995)
 *   [`weasels`](https://github.com/words/weasels)
     — List of weasel words
 
