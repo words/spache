@@ -6,20 +6,20 @@
 
 List of familiar American-English words: [Revised Spache (1974)][wiki].
 
-Read more on the matter in [Perera, Katherine.  *Linguistic Difficulty
-in Reading Material.*  (Linguistics and the Teacher.  Vol.  112)][book].
+Read more on the matter in [Perera, Katherine.  *Linguistic Difficulty in
+Reading Material.*  (Linguistics and the Teacher.  Vol.  112)][book].
 
 You probably also want the [formula][].
 
-## Installation
+## Install
 
 [npm][]:
 
-```bash
+```sh
 npm install spache
 ```
 
-## Usage
+## Use
 
 ```js
 var spache = require('spache')
