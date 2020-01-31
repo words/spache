@@ -1,7 +1,7 @@
 'use strict'
 
 var fs = require('fs')
-var http = require('http')
+var https = require('https')
 var bail = require('bail')
 var concat = require('concat-stream')
 var unified = require('unified')
@@ -10,9 +10,9 @@ var selectAll = require('hast-util-select').selectAll
 var toString = require('hast-util-to-string')
 
 var endpoint =
-  'http://www.readabilityformulas.com/articles/spache-formula-word-list.php'
+  'https://www.readabilityformulas.com/articles/spache-formula-word-list.php'
 
-http.get(endpoint, onresponse)
+https.get(endpoint, onresponse)
 
 function onresponse(res) {
   res.pipe(concat(onconcat)).on('error', bail)
@@ -42,5 +42,5 @@ function lower(value) {
 }
 
 function unique(value, index, all) {
-  return !all.includes(value, index + 1)
+  return all.indexOf(value) === index
 }
