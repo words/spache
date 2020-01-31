@@ -42,5 +42,5 @@ function lower(value) {
 }
 
 function unique(value, index, all) {
-  return all.indexOf(value, index + 1) === -1
+  return !all.includes(value, index + 1)
 }
