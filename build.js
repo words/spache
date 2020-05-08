@@ -14,14 +14,12 @@ var endpoint =
 
 https.get(endpoint, onresponse)
 
-function onresponse(res) {
-  res.pipe(concat(onconcat)).on('error', bail)
+function onresponse(response) {
+  response.pipe(concat(onconcat)).on('error', bail)
 }
 
 function onconcat(buf) {
-  var tree = unified()
-    .use(parse)
-    .parse(buf)
+  var tree = unified().use(parse).parse(buf)
 
   var values = selectAll('td p', tree)
     .map(toString)
