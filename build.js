@@ -26,7 +26,7 @@ function onconcat(buf) {
   var values = selectAll('td p', tree)
     .map(toString)
     .join('|')
-    .replace(/\\/g, "$&'")
+    .replace(/\\/g, "'")
     .trim()
     .split(/\s*\|\s*/g)
     .filter(Boolean)
