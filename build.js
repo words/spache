@@ -22,23 +22,15 @@ function onconcat(buf) {
   var tree = unified().use(parse).parse(buf)
 
   var values = selectAll('td p', tree)
-    .map(toString)
+    .map((d) => toString(d))
     .join('|')
     .replace(/\\/g, "'")
     .trim()
     .split(/\s*\|\s*/g)
     .filter(Boolean)
-    .map(lower)
-    .filter(unique)
+    .map((d) => d.toLowerCase())
+    .filter((d, index, all) => all.indexOf(d) === index)
     .sort()
 
   fs.writeFile('index.json', JSON.stringify(values, 0, 2) + '\n', bail)
-}
-
-function lower(value) {
-  return value.toLowerCase()
-}
-
-function unique(value, index, all) {
-  return all.indexOf(value) === index
 }
