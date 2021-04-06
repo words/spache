@@ -1,7 +1,5 @@
-'use strict'
-
-var test = require('tape')
-var spache = require('.')
+import test from 'tape'
+import {spache} from './index.js'
 
 test('spache', function (t) {
   t.equal(typeof spache, 'object', 'should be an array #1')

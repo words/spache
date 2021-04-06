@@ -1,13 +1,11 @@
-'use strict'
-
-var fs = require('fs')
-var https = require('https')
-var bail = require('bail')
-var concat = require('concat-stream')
-var unified = require('unified')
-var parse = require('rehype-parse')
-var selectAll = require('hast-util-select').selectAll
-var toString = require('hast-util-to-string')
+import fs from 'fs'
+import https from 'https'
+import {bail} from 'bail'
+import concat from 'concat-stream'
+import unified from 'unified'
+import parse from 'rehype-parse'
+import $ from 'hast-util-select'
+import toString from 'hast-util-to-string'
 
 var endpoint =
   'https://www.readabilityformulas.com/articles/spache-formula-word-list.php'
@@ -21,7 +19,7 @@ function onresponse(response) {
 function onconcat(buf) {
   var tree = unified().use(parse).parse(buf)
 
-  var values = selectAll('td p', tree)
+  var values = $.selectAll('td p', tree)
     .map((d) => toString(d))
     .join('|')
     .replace(/\\/g, "'")
@@ -32,5 +30,9 @@ function onconcat(buf) {
     .filter((d, index, all) => all.indexOf(d) === index)
     .sort()
 
-  fs.writeFile('index.json', JSON.stringify(values, 0, 2) + '\n', bail)
+  fs.writeFile(
+    'index.js',
+    'export var spache = ' + JSON.stringify(values, null, 2) + '\n',
+    bail
+  )
 }

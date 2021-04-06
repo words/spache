@@ -14,6 +14,9 @@ You probably also want the [formula][].
 
 ## Install
 
+This package is ESM only: Node 12+ is needed to use it and it must be `import`ed
+instead of `require`d.
+
 [npm][]:
 
 ```sh
@@ -23,7 +26,7 @@ npm install spache
 ## Use
 
 ```js
-var spache = require('spache')
+import {spache} from 'spache'
 
 spache.length //=> 1063
 
@@ -46,6 +49,9 @@ Yields:
 ```
 
 ## API
+
+This package exports the following identifiers: `spache`.
+There is no default export.
 
 ### `spache`
 
