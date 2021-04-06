@@ -1,6 +1,7 @@
 # spache
 
 [![Build][build-badge]][build]
+[![Coverage][coverage-badge]][coverage]
 [![Downloads][downloads-badge]][downloads]
 [![Size][size-badge]][size]
 
@@ -71,9 +72,13 @@ Yields:
 
 <!-- Definitions -->
 
-[build-badge]: https://img.shields.io/travis/words/spache.svg
+[build-badge]: https://github.com/words/spache/workflows/main/badge.svg
 
-[build]: https://travis-ci.org/words/spache
+[build]: https://github.com/words/spache/actions
+
+[coverage-badge]: https://img.shields.io/codecov/c/github/words/spache.svg
+
+[coverage]: https://codecov.io/github/words/spache
 
 [downloads-badge]: https://img.shields.io/npm/dm/spache.svg
 
