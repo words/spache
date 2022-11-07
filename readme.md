@@ -7,20 +7,56 @@
 
 List of familiar American-English words: [Revised Spache (1974)][wiki].
 
-Read more on the matter in [Perera, Katherine.  *Linguistic Difficulty in
-Reading Material.*  (Linguistics and the Teacher.  Vol.  112)][book].
+## Contents
 
-You probably also want the [formula][].
+*   [What is this?](#what-is-this)
+*   [When should I use this?](#when-should-i-use-this)
+*   [Install](#install)
+*   [Use](#use)
+*   [API](#api)
+    *   [`spache`](#spache-1)
+*   [Data](#data)
+*   [Types](#types)
+*   [Compatibility](#compatibility)
+*   [Related](#related)
+*   [Contribute](#contribute)
+*   [Security](#security)
+*   [License](#license)
+
+## What is this?
+
+This package exposes a list of familiar words.
+
+## When should I use this?
+
+Use this when you want to do readability things with natural language.
+
+Use [`spache-formula`][spache-formula] for the formula.
+
+Alternatively, you can use [`dale-chall`][dale-chall], which has more words
+(about 3 000) and is more recent (1995).
 
 ## Install
 
-This package is ESM only: Node 12+ is needed to use it and it must be `import`ed
-instead of `require`d.
-
-[npm][]:
+This package is [ESM only][esm].
+In Node.js (version 14.14+, 16.0+), install with [npm][]:
 
 ```sh
 npm install spache
+```
+
+In Deno with [`esm.sh`][esmsh]:
+
+```js
+import {spache} from 'https://esm.sh/spache@2'
+```
+
+In browsers with [`esm.sh`][esmsh]:
+
+```html
+<script type="module">
+  import {spache} from 'https://esm.sh/spache@2?bundle'
+</script>
 ```
 
 ## Use
@@ -50,27 +86,44 @@ Yields:
 
 ## API
 
-This package exports the following identifiers: `spache`.
+This package exports the identifier `spache`.
 There is no default export.
 
 ### `spache`
 
-**spache** exposes a list of strings (`Array.<string>`).
+List of strings (`Array<string>`).
+
+## Data
+
+See [Perera, Katherine.  *Linguistic Difficulty in
+Reading Material.*  (Linguistics and the Teacher.  Vol.  112)][book].
+
+## Types
+
+This package is fully typed with [TypeScript][].
+It exports no additional types.
+
+## Compatibility
+
+This package is at least compatible with all maintained versions of Node.js.
+As of now, that is Node.js 14.14+ and 16.0+.
+It also works in Deno and modern browsers.
 
 ## Related
 
-*   [`buzzwords`](https://github.com/words/buzzwords)
-    — List of buzzwords
-*   [`fillers`](https://github.com/words/fillers)
-    — List of filler words
-*   [`hedges`](https://github.com/words/hedges)
-    — List of hedge words
-*   [`profanities`](https://github.com/words/profanities)
-    — List of profane words
-*   [`dale-chall`](https://github.com/words/dale-chall)
-    — List of easy American-English words: New Dale-Chall (1995)
-*   [`weasels`](https://github.com/words/weasels)
-    — List of weasel words
+*   [`spache-formula`][spache-formula]
+    — formula to detect the grade level of text according
+*   [`dale-chall`][dale-chall]
+    — list of easy American-English words: new Dale–Chall (1995)
+
+## Contribute
+
+Yes please!
+See [How to Contribute to Open Source][contribute].
+
+## Security
+
+This package is safe.
 
 ## License
 
@@ -96,6 +149,14 @@ There is no default export.
 
 [npm]: https://docs.npmjs.com/cli/install
 
+[esm]: https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c
+
+[esmsh]: https://esm.sh
+
+[typescript]: https://www.typescriptlang.org
+
+[contribute]: https://opensource.guide/how-to-contribute/
+
 [license]: license
 
 [author]: https://wooorm.com
@@ -104,4 +165,6 @@ There is no default export.
 
 [book]: https://books.google.com/books?id=oNXFQ9Gn6XIC&pg=PA106&lpg=PA106
 
-[formula]: https://github.com/words/spache-formula
+[spache-formula]: https://github.com/words/spache-formula
+
+[dale-chall]: https://github.com/words/dale-chall
