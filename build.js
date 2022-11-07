@@ -23,7 +23,7 @@ const values = selectAll('td p', tree)
 
 await fs.writeFile(
   'index.js',
-  'export const spache = ' +
+  '/**\n * List of familiar American-English words: Revised Spache (1974)\n*/\nexport const spache = ' +
     JSON.stringify([...new Set(values)], null, 2) +
     '\n'
 )

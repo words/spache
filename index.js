@@ -1,3 +1,6 @@
+/**
+ * List of familiar American-English words: Revised Spache (1974)
+ */
 export const spache = [
   'a',
   'able',
