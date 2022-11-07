@@ -7,7 +7,7 @@ import rehypeParse from 'rehype-parse'
 import {selectAll} from 'hast-util-select'
 import {toString} from 'hast-util-to-string'
 
-var endpoint =
+const endpoint =
   'https://www.readabilityformulas.com/articles/spache-formula-word-list.php'
 
 https.get(endpoint, onresponse)
@@ -23,9 +23,9 @@ function onresponse(response) {
  * @param {Buffer} buf
  */
 function onconcat(buf) {
-  var tree = unified().use(rehypeParse).parse(buf)
+  const tree = unified().use(rehypeParse).parse(buf)
 
-  var values = selectAll('td p', tree)
+  const values = selectAll('td p', tree)
     .map((/** @type {import('hast').Element} */ d) => toString(d))
     .join('|')
     .replace(/\\/g, "'")
@@ -44,7 +44,7 @@ function onconcat(buf) {
 
   fs.writeFile(
     'index.js',
-    'export var spache = ' + JSON.stringify(values, null, 2) + '\n',
+    'export const spache = ' + JSON.stringify(values, null, 2) + '\n',
     bail
   )
 }

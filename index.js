@@ -1,4 +1,4 @@
-export var spache = [
+export const spache = [
   'a',
   'able',
   'about',
