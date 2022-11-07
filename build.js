@@ -1,50 +1,29 @@
-import fs from 'node:fs'
-import https from 'node:https'
-import {bail} from 'bail'
-import concat from 'concat-stream'
-import {unified} from 'unified'
-import rehypeParse from 'rehype-parse'
+import fs from 'node:fs/promises'
+import fetch from 'node-fetch'
+import {fromHtml} from 'hast-util-from-html'
 import {selectAll} from 'hast-util-select'
 import {toString} from 'hast-util-to-string'
 
-const endpoint =
+const response = await fetch(
   'https://www.readabilityformulas.com/articles/spache-formula-word-list.php'
+)
+const text = await response.text()
 
-https.get(endpoint, onresponse)
+const tree = fromHtml(text)
 
-/**
- * @param {import('http').IncomingMessage} response
- */
-function onresponse(response) {
-  response.pipe(concat(onconcat)).on('error', bail)
-}
+const values = selectAll('td p', tree)
+  .map((d) => toString(d))
+  .join('|')
+  .replace(/\\/g, "'")
+  .trim()
+  .toLowerCase()
+  .split(/\s*\|\s*/g)
+  .filter(Boolean)
+  .sort()
 
-/**
- * @param {Buffer} buf
- */
-function onconcat(buf) {
-  const tree = unified().use(rehypeParse).parse(buf)
-
-  const values = selectAll('td p', tree)
-    .map((/** @type {import('hast').Element} */ d) => toString(d))
-    .join('|')
-    .replace(/\\/g, "'")
-    .trim()
-    .split(/\s*\|\s*/g)
-    .filter(Boolean)
-    .map((/** @type {string} */ d) => d.toLowerCase())
-    .filter(
-      (
-        /** @type {string} */ d,
-        /** @type {number} */ index,
-        /** @type {Array.<string>} */ all
-      ) => all.indexOf(d) === index
-    )
-    .sort()
-
-  fs.writeFile(
-    'index.js',
-    'export const spache = ' + JSON.stringify(values, null, 2) + '\n',
-    bail
-  )
-}
+await fs.writeFile(
+  'index.js',
+  'export const spache = ' +
+    JSON.stringify([...new Set(values)], null, 2) +
+    '\n'
+)
